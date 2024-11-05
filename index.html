@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover New Zealand</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Discover NZ</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="food.html">Food</a></li>
+                    <li class="nav-item"><a class="nav-link" href="culture.html">Culture</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+        <div class="overlay"></div>
+        <div class="container position-relative">
+            <img class = "bg" src = "./assets/newbg.jpg"  width ="100%">
+            <h1 class="display-4">Welcome to New Zealand</h1>
+            <p class="lead">Uncover the beauty and culture of New Zealand, where adventure awaits at every turn.</p>
+            <a href="destinations.html" class="btn btn-primary mt-4">Explore Now</a>
+        </div>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="introduction text-center py-5">
+        <div class="container">
+            <h2 class="fade-in">Discover a Land of Adventure</h2>
+            <p class="fade-in">From snow-capped mountains to pristine beaches, New Zealand is a land of unparalleled beauty, offering rich cultural experiences, vibrant cities, and unique wildlife.</p>
+        </div>
+    </section>
+
+    <!-- Featured Sections -->
+    <section class="featured-sections py-5">
+        <div class="container">
+            <div class="row text-center">
+                <!-- Destinations Card -->
+                <div class="col-md-4 mb-4 fade-in">
+                    <div class="card h-100">
+                        <img src="assets/newzealand.jpg" class="card-img-top" alt="Destinations">
+                        <div class="card-body">
+                            <h5 class="card-title">Top Destinations</h5>
+                            <p class="card-text">Explore the most iconic places in New Zealand, from Auckland to Queenstown.</p>
+                            <a href="destinations.html" class="btn btn-outline-primary">Discover More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Food Card -->
+                <div class="col-md-4 mb-4 fade-in">
+                    <div class="card h-100">
+                        <img src="assets/Pavlova.jpg" class="card-img-top" alt="Food">
+                        <div class="card-body">
+                            <h5 class="card-title">Delicious Cuisine</h5>
+                            <p class="card-text">Taste the unique flavors of New Zealand, from savory lamb to sweet pavlova.</p>
+                            <a href="food.html" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Culture Card -->
+                <div class="col-md-4 mb-4 fade-in">
+                    <div class="card h-100">
+                        <img src="assets/culture.jpg" class="card-img-top" alt="Culture">
+                        <div class="card-body">
+                            <h5 class="card-title">Rich Culture</h5>
+                            <p class="card-text">Dive into the Maori heritage and experience the spirit of New Zealand.</p>
+                            <a href="culture.html" class="btn btn-outline-primary">Explore Culture</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials text-center py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-5 fade-in">What Travelers Are Saying</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <blockquote class="blockquote">
+                            <p>"New Zealand was a dream come true! Stunning landscapes and wonderful people."</p>
+                            <footer class="blockquote-footer">Emma, UK</footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <blockquote class="blockquote">
+                            <p>"The culture and beauty of New Zealand made it a trip I’ll never forget."</p>
+                            <footer class="blockquote-footer">Liam, USA</footer>
+                        </blockquote>
+                    </div>
+                    <div class="carousel-item">
+                        <blockquote class="blockquote">
+                            <p>"Amazing food, vibrant cities, and incredible adventures. Can't wait to return!"</p>
+                            <footer class="blockquote-footer">Sophia, Australia</footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Discover New Zealand. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations in New Zealand</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        .card img {
+            height: 200px; /* Fixed height for all images in cards */
+            object-fit: cover; /* Ensures image covers the space without distortion */
+            border-radius: 10px; /* Slight curved border */
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+     <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Discover NZ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                <li class="nav-item"><a class="nav-link" href="food.html">Food</a></li>
+                <li class="nav-item"><a class="nav-link" href="culture.html">Culture</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Header -->
+    <header class="bg-dark text-white text-center py-3">
+        <h1>Explore New Zealand's Stunning Destinations</h1>
+        <p class="lead">Discover the beauty and excitement of New Zealand's top spots!</p>
+    </header>
+
+    <!-- Destinations Content -->
+    <section class="container my-5">
+        <div class="row">
+            <!-- Destination Cards -->
+            <div class="col-md-4 mb-4 fade-in">
+                <div class="card" data-destination="Auckland">
+                    <img src="assets/auckland.jpg" class="card-img-top" alt="Auckland">
+                    <div class="card-body">
+                        <h5 class="card-title">Auckland</h5>
+                        <p class="card-text">Auckland is known for its beautiful harbors and vibrant culture.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 fade-in">
+                <div class="card" data-destination="Queenstown">
+                    <img src="assets/queenstown.jpg" class="card-img-top" alt="Queenstown">
+                    <div class="card-body">
+                        <h5 class="card-title">Queenstown</h5>
+                        <p class="card-text">Queenstown is famous for adventure sports and breathtaking landscapes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 fade-in">
+                <div class="card" data-destination="Wellington">
+                    <img src="assets/wellington.webp" class="card-img-top" alt="Wellington">
+                    <div class="card-body">
+                        <h5 class="card-title">Wellington</h5>
+                        <p class="card-text">Wellington, the capital city, is known for its vibrant arts scene.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 fade-in">
+                <div class="card" data-destination="Rotorua">
+                    <img src="assets/rotorua.jpg" class="card-img-top" alt="Rotorua">
+                    <div class="card-body">
+                        <h5 class="card-title">Rotorua</h5>
+                        <p class="card-text">Rotorua is renowned for its geothermal activity and Maori culture.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 fade-in">
+                <div class="card" data-destination="Christchurch">
+                    <img src="assets/christchurch.avif" class="card-img-top" alt="Christchurch">
+                    <div class="card-body">
+                        <h5 class="card-title">Christchurch</h5>
+                        <p class="card-text">Christchurch is known for its English heritage and beautiful gardens.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4 fade-in">
+                <div class="card" data-destination="Mount Cook">
+                    <img src="assets/mountcook.webp" class="card-img-top" alt="Mount Cook">
+                    <div class="card-body">
+                        <h5 class="card-title">Mount Cook</h5>
+                        <p class="card-text">Mount Cook is New Zealand's highest peak, offering stunning views.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Destination Details -->
+        <div class="modal fade" id="destinationModal" tabindex="-1" aria-labelledby="destinationModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="destinationModalLabel">Destination Details</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modalBody">
+                        <!-- Dynamic content will be added here -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Modularity: Function to display destination details
+        function showDestinationDetails(destination) {
+            const details = {
+                Auckland: "Auckland is the largest city in New Zealand, known for its vibrant nightlife, diverse culture, and beautiful harbors. Key attractions include the Sky Tower and Waiheke Island.",
+                Queenstown: "Queenstown is a resort town famous for adventure sports, including skiing, bungee jumping, and jet boating. It's surrounded by stunning mountain scenery.",
+                Wellington: "Wellington is the capital city, known for its arts scene and film industry, being home to the Weta Workshop. Don't miss the national museum, Te Papa.",
+                Rotorua: "Rotorua is famous for its geothermal activity and Maori culture. Visit the geysers and hot mud pools, and experience a traditional Maori hangi feast.",
+                Christchurch: "Christchurch, known as the Garden City, features beautiful parks, gardens, and a strong English heritage. The city is also rebuilding from the 2011 earthquake.",
+                'Mount Cook': "Mount Cook, or Aoraki, is New Zealand's highest mountain, renowned for its stunning views and hiking opportunities in the Aoraki/Mount Cook National Park."
+            };
+            return details[destination] || "Details coming soon!";
+        }
+
+        // Add event listeners to destination cards
+        const destinationCards = document.querySelectorAll('.card');
+        const modalBody = document.getElementById('modalBody');
+
+        destinationCards.forEach(card => {
+            card.addEventListener('click', function () {
+                const destination = this.getAttribute('data-destination');
+                const detailText = showDestinationDetails(destination);
+                modalBody.innerHTML = `<p>${detailText}</p>`;
+                const modal = new bootstrap.Modal(document.getElementById('destinationModal'));
+                modal.show();
+            });
+        });
+    </script>
+</body>
+</html>
